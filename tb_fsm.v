@@ -28,4 +28,9 @@ begin
 #30 money = 5'd10; select_product = 2'b01;
 #30 money = 5'd20; select_product = 2'b10;
 end
+initial
+begin
+    $dumpfile("project.vcd");
+    $dumpvars(0, test_ven_machine1);
+end
 endmodule
