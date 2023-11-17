@@ -1,4 +1,5 @@
 //Testbench / Stimulus for determining the inputs to the vending machine
+`timescale 1ns / 1ps
 module test_ven_machine1;
 wire news;
 wire choc;
@@ -10,9 +11,11 @@ reg [4:0] money;
 reg [1:0] select_product;
 reg [4:0] extra_cash;
 
-test_ven_machine1 v2(news, choc, juice, balance, money, select_product, extra_cash, clock, reset);
+ven_machine v2(news, choc, juice, balance, money, select_product, extra_cash, clock, reset);
 always
 #5 clock =~ clock;
+initial #200 $finish;
+
 
 initial
 begin
@@ -30,7 +33,12 @@ begin
 end
 initial
 begin
-    $dumpfile("project.vcd");
-    $dumpvars(0, test_ven_machine1);
+   
+   $dumpfile("project.vcd");
+   $dumpvars(0, v2);
+
+  
+
+
 end
 endmodule

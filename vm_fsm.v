@@ -176,7 +176,7 @@ begin
                 choc<=1'b1;
                 juice<=1'b0;
                 balance=money-10;
-                $display("Your cadbury bar will be delivered soon. Your balance is %d-10=%d",money,balance);
+                $display("Your chocolate bar will be delivered soon. Your balance is %d-10=%d",money,balance);
             end
             else if(money==money_20)
             begin
@@ -184,7 +184,7 @@ begin
                 choc<=1'b1;
                 juice<=1'b0;
                 balance=money-10;
-                $display("Your cadbury bar will be delivered soon. Your balance is %d-10=%d",money,balance);
+                $display("Your chocolate bar will be delivered soon. Your balance is %d-10=%d",money,balance);
                 
             end
         end
